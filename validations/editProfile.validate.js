@@ -5,6 +5,7 @@ module.exports = function (user) {
     contact: Joi.string().length(11).required(),
     email: Joi.string().email().required(),
     password: Joi.string().min(8).required(),
+    address: Joi.string().required(),
   })
   return userSchema.validate(user)
 }
