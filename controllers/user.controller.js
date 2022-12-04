@@ -66,6 +66,10 @@ module.exports = {
   editProfile: async (req, res) => {
     try {
       joiHelper(validateEditProfile, req.body)
+      req.body.password = await bcrypt.hash(
+        req.body.password,
+        10
+      )
       const doc = await User.findByIdAndUpdate(
         req.user.id,
         { $set: req.body },
