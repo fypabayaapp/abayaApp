@@ -9,6 +9,7 @@ module.exports = function (product) {
     width: Joi.number().min(1).required(),
     price: Joi.number().min(1).required(),
     stock: Joi.number().min(1).required(),
+    mask: Joi.number().min(1).required(),
     discription: Joi.string().required(),
   })
   return productSchema.validate(product)
