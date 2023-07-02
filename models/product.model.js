@@ -10,6 +10,7 @@ const schema = new Schema({
   price: { type: Number, required: true },
   stock: { type: Number, required: true },
   image: { type: String, required: true },
+  mask: { type: Number, required: true },
   postedBy: { type: Schema.Types.ObjectId, ref: 'user' },
 })
 module.exports = model('product', schema)
