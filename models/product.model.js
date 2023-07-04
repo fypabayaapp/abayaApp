@@ -8,9 +8,9 @@ const schema = new Schema({
   width: { type: String, required: true },
   discription: { type: String, required: true },
   price: { type: Number, required: true },
-  stock: { type: Number, required: true },
+  stock: { type: Number, required: false },
   image: { type: String, required: true },
-  mask: { type: Number, required: true },
+  mask: { type: Number, required: false },
   postedBy: { type: Schema.Types.ObjectId, ref: 'user' },
 })
 module.exports = model('product', schema)
